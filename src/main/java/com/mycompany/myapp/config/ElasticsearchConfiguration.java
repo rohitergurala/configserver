@@ -1,3 +1,4 @@
+/*
 package com.mycompany.myapp.config;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
@@ -5,12 +6,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.github.vanroy.springdata.jest.JestElasticsearchTemplate;
 import com.github.vanroy.springdata.jest.mapper.DefaultJestResultsMapper;
+import io.github.jhipster.config.JHipsterConstants;
 import io.searchbox.client.JestClient;
 import org.springframework.boot.autoconfigure.data.elasticsearch.ElasticsearchProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
 import org.springframework.data.elasticsearch.core.EntityMapper;
 import org.springframework.data.elasticsearch.core.convert.ElasticsearchConverter;
@@ -26,6 +29,7 @@ import org.springframework.data.elasticsearch.core.mapping.SimpleElasticsearchPe
 import java.io.IOException;
 
 @Configuration
+@Profile(JHipsterConstants.SPRING_PROFILE_DEVELOPMENT)
 @EnableConfigurationProperties(ElasticsearchProperties.class)
 public class ElasticsearchConfiguration {
 
@@ -98,3 +102,4 @@ class CustomElasticsearchPersistentProperty extends SimpleElasticsearchPersisten
         return false;
     }
 }
+*/

@@ -178,12 +178,12 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-aop"
     compile "org.springframework.boot:spring-boot-starter-data-elasticsearch"
     // Spring Data Jest dependencies for Elasticsearch
-    compile ("com.github.vanroy:spring-boot-starter-data-jest") {
-        exclude module: 'commons-logging'
-    }
-    // log4j needed to create embedded elasticsearch instance
-    runtime "org.apache.logging.log4j:log4j-api:2.7"
-    runtime "org.apache.logging.log4j:log4j-core:2.7"
+//    compile ("com.github.vanroy:spring-boot-starter-data-jest") {
+//        exclude module: 'commons-logging'
+//    }
+//    // log4j needed to create embedded elasticsearch instance
+//    runtime "org.apache.logging.log4j:log4j-api:2.7"
+//    runtime "org.apache.logging.log4j:log4j-core:2.7"
     // end of Spring Data Jest dependencies
     compile "org.springframework.boot:spring-boot-starter-data-mongodb"
     compile "org.springframework.boot:spring-boot-starter-security"

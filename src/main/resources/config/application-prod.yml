@@ -24,8 +24,8 @@ eureka:
         prefer-ip-address: true
     client:
         service-url:
-            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
-
+#            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
+            defaultZone: https://admin:${jhipster.registry.password}@visioncoreregistry.cfapps.io/eureka/
 spring:
     devtools:
         restart:
@@ -34,10 +34,12 @@ spring:
             enabled: false
     data:
         mongodb:
-            uri: mongodb://localhost:27017
+            uri: mongodb://CloudFoundry_8n2im3eu_1mgedalh_gu6adbi6:ItnYMoYAoPEBq7UrCXsTLYb2FKn9Tt93@ds211143.mlab.com:11143/CloudFoundry_8n2im3eu_1mgedalh
+#            uri:mongodb://localhost:27017
             database: reportingservice
         jest:
-            uri: http://localhost:9200
+            uri: https://gopivotal:432abdb574e565e8499977eba9fe0839@oin-us-east-1.searchly.com
+#           uri: http://localhost:9200
     mail:
         host: localhost
         port: 25

@@ -13,7 +13,7 @@ import java.util.Objects;
  * A Books.
  */
 @Document(collection = "books")
-@org.springframework.data.elasticsearch.annotations.Document(indexName = "books")
+//@org.springframework.data.elasticsearch.annotations.Document(indexName = "books")
 public class Books implements Serializable {
 
     private static final long serialVersionUID = 1L;
