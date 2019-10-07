@@ -3,7 +3,7 @@ package com.mycompany.myapp.service.impl;
 import com.mycompany.myapp.service.BooksService;
 import com.mycompany.myapp.domain.Books;
 import com.mycompany.myapp.repository.BooksRepository;
-import com.mycompany.myapp.repository.search.BooksSearchRepository;
+//import com.mycompany.myapp.repository.search.BooksSearchRepository;
 import com.mycompany.myapp.service.dto.BooksDTO;
 import com.mycompany.myapp.service.mapper.BooksMapper;
 import org.slf4j.Logger;
@@ -29,12 +29,12 @@ public class BooksServiceImpl implements BooksService {
 
     private final BooksMapper booksMapper;
 
-    private final BooksSearchRepository booksSearchRepository;
+//    private final BooksSearchRepository booksSearchRepository;
 
-    public BooksServiceImpl(BooksRepository booksRepository, BooksMapper booksMapper, BooksSearchRepository booksSearchRepository) {
+    public BooksServiceImpl(BooksRepository booksRepository, BooksMapper booksMapper/*, BooksSearchRepository booksSearchRepository*/) {
         this.booksRepository = booksRepository;
         this.booksMapper = booksMapper;
-        this.booksSearchRepository = booksSearchRepository;
+//        this.booksSearchRepository = booksSearchRepository;
     }
 
     /**
@@ -49,7 +49,7 @@ public class BooksServiceImpl implements BooksService {
         Books books = booksMapper.toEntity(booksDTO);
         books = booksRepository.save(books);
         BooksDTO result = booksMapper.toDto(books);
-        booksSearchRepository.save(books);
+//        booksSearchRepository.save(books);
         return result;
     }
 
@@ -88,7 +88,7 @@ public class BooksServiceImpl implements BooksService {
     @Override
     public void delete(String id) {
         log.debug("Request to delete Books : {}", id);        booksRepository.deleteById(id);
-        booksSearchRepository.deleteById(id);
+//        booksSearchRepository.deleteById(id);
     }
 
     /**
@@ -100,8 +100,9 @@ public class BooksServiceImpl implements BooksService {
      */
     @Override
     public Page<BooksDTO> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of Books for query {}", query);
+        /*log.debug("Request to search for a page of Books for query {}", query);
         return booksSearchRepository.search(queryStringQuery(query), pageable)
-            .map(booksMapper::toDto);
+            .map(booksMapper::toDto);*/
+        return null;
     }
 }
