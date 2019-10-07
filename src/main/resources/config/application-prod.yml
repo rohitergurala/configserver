@@ -2,9 +2,6 @@
 # Spring Boot configuration for the "prod" profile.
 #
 # This configuration overrides the application.yml file.
-#
-# More information on profiles: https://www.jhipster.tech/profiles/
-# More information on configuration properties: https://www.jhipster.tech/common-application-properties/
 # ===================================================================
 
 # ===================================================================
@@ -25,7 +22,7 @@ eureka:
     client:
         service-url:
 #            defaultZone: http://admin:${jhipster.registry.password}@localhost:8761/eureka/
-            defaultZone: https://admin:${jhipster.registry.password}@visioncoreregistry.cfapps.io/eureka/
+            defaultZone: https://admin:${reportingservice.registry.password}@visioncoreregistry.cfapps.io/eureka/
 spring:
     devtools:
         restart:
@@ -107,9 +104,6 @@ jhipster:
             jwt:
                 # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
                 # As this is the PRODUCTION configuration, you MUST change the default key, and store it securely:
-                # - In the JHipster Registry (which includes a Spring Cloud Config server)
-                # - In a separate `application-prod.yml` file, in the same folder as your executable WAR file
-                # - In the `JHIPSTER_SECURITY_AUTHENTICATION_JWT_BASE64_SECRET` environment variable
                 base64-secret: MWVlZjFmZDI1M2VmNDIzNzkwNTk2ODlmOTRlNmI0MTAzOTM1OTFiNzQwZDI2MDdlYjM2M2E4OTA3YTYzNmY5ODkzNzgzMTJjZmEzOGNjNmQ4YTRkOGY1ODBkNWM0NzQ5ZjcxMGExMTlmYWYxZjQ2NmE3YzFmNTlmOGE4MTFjZjQ=
                 # Token is valid 24 hours
                 token-validity-in-seconds: 86400
