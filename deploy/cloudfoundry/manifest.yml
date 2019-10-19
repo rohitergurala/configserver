@@ -4,7 +4,6 @@ instances: 1
 buildpack: https://github.com/cloudfoundry/java-buildpack
 services:
 - report_service_mlab
-- report_service_elastic
 applications:
 - name: reportingservice
   env:
