@@ -1,0 +1,11 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.mycompany.myapp.config.ApplicationProperties",
+      "name": "application",
+      "type": "com.mycompany.myapp.config.ApplicationProperties"
+    }
+  ],
+  "properties": []
+}

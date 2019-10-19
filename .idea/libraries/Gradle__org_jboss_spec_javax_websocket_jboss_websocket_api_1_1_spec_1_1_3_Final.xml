@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jboss.spec.javax.websocket:jboss-websocket-api_1.1_spec:1.1.3.Final">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/jboss/spec/javax/websocket/jboss-websocket-api_1.1_spec/1.1.3.Final/jboss-websocket-api_1.1_spec-1.1.3.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
